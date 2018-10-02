@@ -1,0 +1,223 @@
+html
+{
+    position: relative;
+}
+body
+{
+    margin-bottom: 100px;
+    margin-top: 50px;
+    position: relative;
+   
+}
+.jumbotron
+{
+
+    background-image: url(belakang.jpg);
+    background-size: 90%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    
+    
+}
+
+
+.jumbotron h1, .jumbotron p, .jumbotron img
+{
+    text-shadow: 0 0 10px rgba(0,0,0,.5);
+    margin-left: 50px;
+
+}
+.jumbotron p
+{
+    margin-bottom: 42px;
+}
+.jumbotron img
+{
+    border-radius: 50%;
+    border: 2px solid #555;
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
+    
+}
+hr
+{
+    width: 250px;
+    border-top: 2px solid #999999;
+}
+.container
+{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container.navbar
+{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+.tangankanan
+{   
+    top: 326px; 
+    position: absolute;  
+}
+.tangankiri
+{
+    top: 326px;
+    right: 0;
+    position: absolute;
+}
+.section
+{
+    min-height: 600px;
+}
+.pkiri
+{
+    opacity: 0;
+    transform: translate(-50px, 0);
+    transition: 0.7s;
+}
+.pkanan
+{
+    opacity: 0;
+    transform: translate(50px, 0);
+    transition: 0.7s;
+}
+.pkanan.pmuncul
+{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.pkiri.pmuncul
+{
+    opacity: 1;
+    transform: translate(0,0);
+}
+.skill
+{
+    background-color: #eeeeee;
+}
+.table
+{
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 0.7s;
+}
+.table.tmuncul 
+{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+.portfolio
+{
+    padding-top: 10px;
+    padding-bottom: 30px;
+
+}
+.portfolio .card
+{
+    margin: auto;
+    opacity: 0;
+    transition: .7s;
+    transform: translate(0,-40px);
+}
+.portfolio .card.muncul
+{
+    opacity: 1;
+    transform: translate(0,0);
+}
+
+.overlay
+{
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,.0);
+    z-index: 9999;
+    transition: .3s;
+    text-align: center;
+    padding: 100px 0; 
+}
+.overlay:target
+{
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,.6);
+}
+.overlay img
+{
+    max-height: 100%;
+    box-shadow: 2px 2px 8px rgba(0,0,0,.8);
+}
+
+.overlay:target img
+{
+     animation: zoomDanFade .7s;
+}
+.overlay .close
+{
+    text-decoration: none;
+    position: absolute;
+    left: 65%;
+    top: 8%;
+    color: rgba(255,255,255,1);
+}
+/* animasi */
+@keyframes zoomDanFade 
+{
+    0%
+    {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: scale(1);
+        opacity: 1;
+
+    }
+}
+label
+{
+    margin-top: 10px;
+}
+div .row
+{
+    margin-top: 20px;
+}
+
+.contact
+{
+    background-color: #eeeeee;
+    min-height: 800px;
+}
+
+.formgroup, .list-group
+{
+    opacity: 0;
+    transform: translate(0, -40px);
+    transition: 1.5s;
+   
+}
+.formgroup.fmuncul, .list-group.lmuncul
+{
+    opacity: 1;
+    transform: translate(0, 0);
+}
+footer
+{
+    position: absolute;
+    bottom: -150px;
+    width: 100%;
+    height: 150px;
+    background-color: #333333;
+    padding-top: 30px;
+}
+footer p
+{
+    color:#aaa;
+    font-size: 1em;
+}
